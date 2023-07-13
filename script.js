@@ -56,10 +56,17 @@ start.addEventListener("click", function () {
     start.addEventListener("click", function () {
       console.log("!!!");
       main.innerHTML = `
-        <div class="yourturn">You</div>
+        <div class="yourturn">
+        You
+        <div>
         ${(yourResult.innerHTML = randomYouPick())}
-        <div class="computerturn">Computer</div>
-        ${(computerResult.innerHTML = randomCPick())}
+        </div>
+        </div>
+        
+        <div class="computerturn">Computer
+        <div>${(computerResult.innerHTML = randomCPick())}</div>
+        </div>
+        
         `;
 
       getResult();
